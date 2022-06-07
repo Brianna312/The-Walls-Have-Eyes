@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32127.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The Walls Have Eyes", "The Walls Have Eyes\The Walls Have Eyes.csproj", "{D885D378-2803-4CBF-A7F5-0350BF773170}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D885D378-2803-4CBF-A7F5-0350BF773170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D885D378-2803-4CBF-A7F5-0350BF773170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D885D378-2803-4CBF-A7F5-0350BF773170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D885D378-2803-4CBF-A7F5-0350BF773170}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9F184296-1ED3-43EA-B4B7-4B6D4F275723}
+	EndGlobalSection
+EndGlobal
