@@ -34,6 +34,9 @@
             this.dialogueLabel = new System.Windows.Forms.Label();
             this.inventoryLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gameEngine
@@ -80,24 +83,48 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
             // 
+            // textBox
+            // 
+            this.textBox.Enabled = false;
+            this.textBox.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox.Location = new System.Drawing.Point(1191, 753);
+            this.textBox.MaxLength = 12;
+            this.textBox.Name = "textBox";
+            this.textBox.Size = new System.Drawing.Size(100, 28);
+            this.textBox.TabIndex = 4;
+            this.textBox.TabStop = false;
+            this.textBox.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(498, 104);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(438, 494);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1381, 846);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.textBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inventoryLabel);
             this.Controls.Add(this.dialogueLabel);
             this.Controls.Add(this.debugLabel);
             this.DoubleBuffered = true;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.Text = "The Walls Have Eyes";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -110,6 +137,8 @@
         private System.Windows.Forms.Label dialogueLabel;
         private System.Windows.Forms.Label inventoryLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
