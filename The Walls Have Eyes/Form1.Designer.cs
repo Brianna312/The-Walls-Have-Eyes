@@ -35,8 +35,12 @@
             this.inventoryLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.npcPictureBox1 = new System.Windows.Forms.PictureBox();
+            this.npcPictureBox2 = new System.Windows.Forms.PictureBox();
+            this.characterPictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.npcPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.characterPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // gameEngine
@@ -48,9 +52,10 @@
             // debugLabel
             // 
             this.debugLabel.AutoSize = true;
-            this.debugLabel.Location = new System.Drawing.Point(853, 14);
+            this.debugLabel.Location = new System.Drawing.Point(640, 11);
+            this.debugLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.debugLabel.Name = "debugLabel";
-            this.debugLabel.Size = new System.Drawing.Size(46, 16);
+            this.debugLabel.Size = new System.Drawing.Size(37, 13);
             this.debugLabel.TabIndex = 0;
             this.debugLabel.Text = "debug";
             // 
@@ -58,9 +63,10 @@
             // 
             this.dialogueLabel.BackColor = System.Drawing.Color.Bisque;
             this.dialogueLabel.Font = new System.Drawing.Font("MV Boli", 15F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dialogueLabel.Location = new System.Drawing.Point(100, 710);
+            this.dialogueLabel.Location = new System.Drawing.Point(75, 577);
+            this.dialogueLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.dialogueLabel.Name = "dialogueLabel";
-            this.dialogueLabel.Size = new System.Drawing.Size(1200, 80);
+            this.dialogueLabel.Size = new System.Drawing.Size(900, 65);
             this.dialogueLabel.TabIndex = 1;
             this.dialogueLabel.Text = "Dialogue";
             this.dialogueLabel.Visible = false;
@@ -68,18 +74,20 @@
             // inventoryLabel
             // 
             this.inventoryLabel.AutoSize = true;
-            this.inventoryLabel.Location = new System.Drawing.Point(875, 66);
+            this.inventoryLabel.Location = new System.Drawing.Point(656, 54);
+            this.inventoryLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.inventoryLabel.Name = "inventoryLabel";
-            this.inventoryLabel.Size = new System.Drawing.Size(61, 16);
+            this.inventoryLabel.Size = new System.Drawing.Size(51, 13);
             this.inventoryLabel.TabIndex = 2;
             this.inventoryLabel.Text = "Inventory";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(939, 14);
+            this.label1.Location = new System.Drawing.Point(828, 11);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "label1";
             // 
@@ -87,28 +95,49 @@
             // 
             this.textBox.Enabled = false;
             this.textBox.Font = new System.Drawing.Font("MV Boli", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox.Location = new System.Drawing.Point(1191, 753);
+            this.textBox.Location = new System.Drawing.Point(893, 612);
+            this.textBox.Margin = new System.Windows.Forms.Padding(2);
             this.textBox.MaxLength = 12;
             this.textBox.Name = "textBox";
-            this.textBox.Size = new System.Drawing.Size(100, 28);
+            this.textBox.Size = new System.Drawing.Size(76, 24);
             this.textBox.TabIndex = 4;
             this.textBox.TabStop = false;
             this.textBox.Visible = false;
             // 
-            // pictureBox1
+            // npcPictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(498, 104);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(438, 494);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
+            this.npcPictureBox1.Location = new System.Drawing.Point(930, 214);
+            this.npcPictureBox1.Name = "npcPictureBox1";
+            this.npcPictureBox1.Size = new System.Drawing.Size(80, 102);
+            this.npcPictureBox1.TabIndex = 7;
+            this.npcPictureBox1.TabStop = false;
+            this.npcPictureBox1.Visible = false;
+            // 
+            // npcPictureBox2
+            // 
+            this.npcPictureBox2.Location = new System.Drawing.Point(930, 362);
+            this.npcPictureBox2.Name = "npcPictureBox2";
+            this.npcPictureBox2.Size = new System.Drawing.Size(80, 102);
+            this.npcPictureBox2.TabIndex = 6;
+            this.npcPictureBox2.TabStop = false;
+            this.npcPictureBox2.Visible = false;
+            // 
+            // characterPictureBox
+            // 
+            this.characterPictureBox.Location = new System.Drawing.Point(930, 54);
+            this.characterPictureBox.Name = "characterPictureBox";
+            this.characterPictureBox.Size = new System.Drawing.Size(80, 102);
+            this.characterPictureBox.TabIndex = 5;
+            this.characterPictureBox.TabStop = false;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1381, 846);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(1036, 687);
+            this.Controls.Add(this.npcPictureBox1);
+            this.Controls.Add(this.npcPictureBox2);
+            this.Controls.Add(this.characterPictureBox);
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inventoryLabel);
@@ -116,7 +145,7 @@
             this.Controls.Add(this.debugLabel);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "The Walls Have Eyes";
@@ -124,7 +153,9 @@
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.Form1_Paint);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.npcPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.characterPictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -138,7 +169,9 @@
         private System.Windows.Forms.Label inventoryLabel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox characterPictureBox;
+        private System.Windows.Forms.PictureBox npcPictureBox2;
+        private System.Windows.Forms.PictureBox npcPictureBox1;
     }
 }
 

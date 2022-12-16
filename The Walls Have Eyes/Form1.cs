@@ -45,7 +45,7 @@ namespace The_Walls_Have_Eyes
 
         List<string> InventoryList = new List<string>(new string[] {"zero", "empty", "empty", "empty", "empty", "empty", "empty", "empty", "empty"});
 
-        string area = "pond";
+        string area = "spawn";
         string facing = "front";
 
         string dialogueText = "";
@@ -97,6 +97,7 @@ namespace The_Walls_Have_Eyes
         Brush frogPupilBrush = new SolidBrush(Color.FromArgb(250, 7, 120, 30));
         Brush limeBrush = new SolidBrush(Color.FromArgb(250, 18, 222, 59));
         Brush yellowBrush = new SolidBrush(Color.FromArgb(250, 250, 243, 32));
+        
         ////character brushes
         Brush shoeBrush = new SolidBrush(Color.FromArgb(250, 45, 45, 48));
         Brush pantsBrush = new SolidBrush(Color.FromArgb(250, 71, 70, 79));
@@ -117,7 +118,7 @@ private void Form1_Load(object sender, EventArgs e)
             character.Location = new Point(this.Width/2 - 15, this.Height / 2 - 20);
             Refresh();
         }
-
+        
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
             if (area == "spawn")
@@ -186,110 +187,7 @@ private void Form1_Load(object sender, EventArgs e)
 
                 if (facing == "front")
                 {
-                    //////drawing character
-                    ////Forward
-                    ////shoes and pants
-                    e.Graphics.DrawLine(blackPen, character.X + 13, character.Y + 47, character.X + 13, character.Y + 48);
-                    e.Graphics.FillRectangle(pantsBrush, character.X + 7, character.Y + 41, 13, 7);
-                    //left
-                    e.Graphics.FillRectangle(shoeBrush, character.X + 8, character.Y + 56, 5, 3);
-                    e.Graphics.FillRectangle(pantsBrush, character.X + 7, character.Y + 47, 6, 9);
-                    e.Graphics.DrawLine(blackPen, character.X + 8, character.Y + 58, character.X + 12, character.Y + 58);
-                    e.Graphics.DrawLine(blackPen, character.X + 8, character.Y + 58, character.X + 8, character.Y + 56);
-                    e.Graphics.DrawLine(blackPen, character.X + 12, character.Y + 58, character.X + 12, character.Y + 48);
-                    e.Graphics.DrawLine(blackPen, character.X + 7, character.Y + 56, character.X + 12, character.Y + 56);
-                    e.Graphics.DrawLine(blackPen, character.X + 7, character.Y + 56, character.X + 7, character.Y + 42);
-                    //right
-                    e.Graphics.FillRectangle(shoeBrush, character.X + 14, character.Y + 56, 5, 3);
-                    e.Graphics.FillRectangle(pantsBrush, character.X + 14, character.Y + 47, 6, 9);
-                    e.Graphics.DrawLine(blackPen, character.X + 14, character.Y + 58, character.X + 18, character.Y + 58);
-                    e.Graphics.DrawLine(blackPen, character.X + 18, character.Y + 58, character.X + 18, character.Y + 56);
-                    e.Graphics.DrawLine(blackPen, character.X + 14, character.Y + 58, character.X + 14, character.Y + 48);
-                    e.Graphics.DrawLine(blackPen, character.X + 14, character.Y + 56, character.X + 19, character.Y + 56);
-                    e.Graphics.DrawLine(blackPen, character.X + 19, character.Y + 56, character.X + 19, character.Y + 42);
-                    ////shirt
-                    e.Graphics.FillRectangle(shirtBrush, character.X + 1, character.Y + 30, 6, 9);
-                    e.Graphics.FillRectangle(shirtBrush, character.X + 2, character.Y + 28, 22, 4);
-                    e.Graphics.FillRectangle(shirtBrush, character.X + 7, character.Y + 32, 15, 10);
-                    e.Graphics.FillRectangle(shirtBrush, character.X + 20, character.Y + 30, 6, 9);
-                    e.Graphics.DrawLine(blackPen, character.X + 6, character.Y + 42, character.X + 20, character.Y + 42);
-                    e.Graphics.DrawLine(blackPen, character.X + 9, character.Y + 27, character.X + 17, character.Y + 27);
-                    //left
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 3, character.Y + 38, 4, 3);
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 20, character.Y + 38, 4, 3);
-                    e.Graphics.DrawLine(blackPen, character.X + 6, character.Y + 42, character.X + 6, character.Y + 33);
-                    e.Graphics.DrawLine(blackPen, character.X + 6, character.Y + 40, character.X + 2, character.Y + 40);
-                    e.Graphics.DrawLine(blackPen, character.X + 1, character.Y + 38, character.X + 6, character.Y + 38);
-                    e.Graphics.DrawLine(blackPen, character.X + 2, character.Y + 38, character.X + 2, character.Y + 40);
-                    e.Graphics.DrawLine(blackPen, character.X + 1, character.Y + 38, character.X + 1, character.Y + 30);
-                    e.Graphics.DrawLine(blackPen, character.X + 1, character.Y + 30, character.X + 3, character.Y + 28);
-                    e.Graphics.DrawLine(blackPen, character.X + 3, character.Y + 28, character.X + 9, character.Y + 28);
-                    //right
-                    e.Graphics.DrawLine(blackPen, character.X + 20, character.Y + 42, character.X + 20, character.Y + 33);
-                    e.Graphics.DrawLine(blackPen, character.X + 20, character.Y + 40, character.X + 24, character.Y + 40);
-                    e.Graphics.DrawLine(blackPen, character.X + 20, character.Y + 38, character.X + 25, character.Y + 38);
-                    e.Graphics.DrawLine(blackPen, character.X + 24, character.Y + 40, character.X + 24, character.Y + 38);
-                    e.Graphics.DrawLine(blackPen, character.X + 25, character.Y + 38, character.X + 25, character.Y + 30);
-                    e.Graphics.DrawLine(blackPen, character.X + 25, character.Y + 30, character.X + 23, character.Y + 28);
-                    e.Graphics.DrawLine(blackPen, character.X + 23, character.Y + 28, character.X + 17, character.Y + 28);
-                    //detailing
-                    e.Graphics.DrawLine(blackPen, character.X + 15, character.Y + 27, character.X + 15, character.Y + 42);
-                    e.Graphics.FillRectangle(blackBrush, character.X + 12, character.Y + 30, 2, 2);
-                    e.Graphics.FillRectangle(blackBrush, character.X + 12, character.Y + 34, 2, 2);
-                    e.Graphics.FillRectangle(blackBrush, character.X + 12, character.Y + 38, 2, 2);
-                    ////head
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 8, character.Y + 10, 11, 17);
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 5, character.Y + 22, 4, 3);
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 2, character.Y + 11, 6, 11);
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 1, character.Y + 11, 2, 7);
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 19, character.Y + 13, 3, 13);
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 22, character.Y + 11, 3, 12);
-                    e.Graphics.FillRectangle(whiteBrush, character.X + 25, character.Y + 11, 2, 8);
-
-                    e.Graphics.DrawLine(blackPen, character.X + 8, character.Y + 26, character.X + 18, character.Y + 26);
-                    e.Graphics.DrawLine(blackPen, character.X + 9, character.Y, character.X + 17, character.Y);
-                    //left
-                    e.Graphics.FillRectangle(blackBrush, character.X + 9, character.Y + 14, 2, 3);
-                    e.Graphics.DrawLine(blackPen, character.X + 6, character.Y + 25, character.X + 8, character.Y + 25);
-                    e.Graphics.DrawLine(blackPen, character.X + 6, character.Y + 24, character.X + 5, character.Y + 24);
-                    e.Graphics.DrawLine(blackPen, character.X + 5, character.Y + 23, character.X + 4, character.Y + 23);
-                    e.Graphics.DrawLine(blackPen, character.X + 3, character.Y + 22, character.X + 4, character.Y + 22);
-                    e.Graphics.DrawLine(blackPen, character.X + 2, character.Y + 21, character.X + 3, character.Y + 21);
-                    e.Graphics.DrawLine(blackPen, character.X + 2, character.Y + 21, character.X + 1, character.Y + 17);
-                    e.Graphics.DrawLine(blackPen, character.X, character.Y + 17, character.X, character.Y + 8);
-                    e.Graphics.DrawLine(blackPen, character.X, character.Y + 8, character.X + 7, character.Y + 1);
-                    e.Graphics.DrawLine(blackPen, character.X + 7, character.Y + 1, character.X + 9, character.Y + 1);
-                    //right
-                    e.Graphics.FillRectangle(blackBrush, character.X + 16, character.Y + 14, 2, 3);
-                    e.Graphics.DrawLine(blackPen, character.X + 19, character.Y + 25, character.X + 21, character.Y + 25);
-                    e.Graphics.DrawLine(blackPen, character.X + 21, character.Y + 24, character.X + 22, character.Y + 24);
-                    e.Graphics.DrawLine(blackPen, character.X + 22, character.Y + 23, character.X + 23, character.Y + 23);
-                    e.Graphics.DrawLine(blackPen, character.X + 23, character.Y + 22, character.X + 24, character.Y + 22);
-                    e.Graphics.DrawLine(blackPen, character.X + 24, character.Y + 21, character.X + 25, character.Y + 21);
-                    e.Graphics.DrawLine(blackPen, character.X + 25, character.Y + 21, character.X + 26, character.Y + 17);
-                    e.Graphics.DrawLine(blackPen, character.X + 27, character.Y + 17, character.X + 27, character.Y + 8);
-                    e.Graphics.DrawLine(blackPen, character.X + 27, character.Y + 8, character.X + 20, character.Y + 1);
-                    e.Graphics.DrawLine(blackPen, character.X + 20, character.Y + 1, character.X + 18, character.Y + 1);
-                    ////hair
-                    e.Graphics.FillRectangle(hairBrush, character.X + 9, character.Y + 1, 9, 11);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 6, character.Y + 2, 3, 10);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 1, character.Y + 7, 6, 4);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 4, character.Y + 4, 2, 3);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 3, character.Y + 6, 2, 2);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 18, character.Y + 2, 3, 10);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 21, character.Y + 3, 2, 8);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 23, character.Y + 5, 2, 6);
-                    e.Graphics.FillRectangle(hairBrush, character.X + 25, character.Y + 7, 3, 3);
-                    e.Graphics.DrawLine(blackPen, character.X + 1, character.Y + 10, character.X + 4, character.Y + 10);
-                    e.Graphics.DrawLine(blackPen, character.X + 4, character.Y + 11, character.X + 5, character.Y + 11);
-                    e.Graphics.DrawLine(blackPen, character.X + 5, character.Y + 12, character.X + 9, character.Y + 12);
-                    e.Graphics.DrawLine(blackPen, character.X + 9, character.Y + 11, character.X + 11, character.Y + 11);
-                    e.Graphics.DrawLine(blackPen, character.X + 11, character.Y + 10, character.X + 15, character.Y + 10);
-                    e.Graphics.DrawLine(blackPen, character.X + 15, character.Y + 11, character.X + 17, character.Y + 11);
-                    e.Graphics.DrawLine(blackPen, character.X + 17, character.Y + 12, character.X + 20, character.Y + 12);
-                    e.Graphics.DrawLine(blackPen, character.X + 20, character.Y + 11, character.X + 22, character.Y + 11);
-                    e.Graphics.DrawLine(blackPen, character.X + 23, character.Y + 10, character.X + 26, character.Y + 10);
-                    // details
+                    characterPictureBox.Image = Properties.Resources.frontcroppped; 
                 }
                 if (facing == "back")
                 {
@@ -1226,8 +1124,11 @@ private void Form1_Load(object sender, EventArgs e)
             {                
                 if (battle == true)
                 {
-                    pictureBox1.Image
+                    
                 }
+                //syncing picture boxes
+                characterPictureBox.Size = character.Size;
+                characterPictureBox.Location = character.Location;
                 //inventory
                 if (oneDown == true && battle == false)
                 {
@@ -1240,12 +1141,15 @@ private void Form1_Load(object sender, EventArgs e)
                 }
                 if (area == "spawn")
                 {
+                    
+                    debugLabel.Text = $"{mouse.Location}";
                     ////moving the character
-                    debugLabel.Text = $"{character.X}, {character.Y}";
+                    //debugLabel.Text = $"{character.X}, {character.Y}";
                     if (wDown == true)
                     {
                         character.Y -= 5;
                         facing = "back";
+                        
                     }
                     else if (sDown == true)
                     {
@@ -1287,7 +1191,7 @@ private void Form1_Load(object sender, EventArgs e)
                             TutorialMethod();
                         }
                     }
-                    
+
                     ////Characters
                     //Mouse
                     if (mouseM <= 25)
@@ -1613,6 +1517,7 @@ private void Form1_Load(object sender, EventArgs e)
         {
 
         }
+
     }
     
 }
